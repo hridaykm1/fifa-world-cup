@@ -20,17 +20,18 @@ main {
     font-size: 20px;
     padding: 16px 25px;
     border-radius: 5px;
-    border: none;
 }
 
 .button-color1 {
     color: #FFFFFF;
     background-color: #DD0000;
+    border: none;
 }
 
 .button-color2 {
     color: #161616;
-    background-color: #FFFFFF
+    background-color: #FFFFFF;
+    border: 1px solid #E8E8E8;
 }
 
 /*----------------------- 
@@ -42,6 +43,8 @@ main {
     border-radius: 30px;
     padding: 0 40px;
     margin-top: 21px;
+    display: flex;
+    flex-direction: row;
 }
 
 .title-area {
@@ -68,10 +71,12 @@ main {
 }
 
 .image-area img {
-    width: 40%;
-    position: absolute;
+    width: 100%;
+    /* position: absolute;
     bottom: 0;
-    right: 10%;
+    right: 10%; */
+    position: relative;
+    margin-top: 40px;
 }
 
 /*------------------------------------- 
@@ -190,4 +195,86 @@ nav li a {
     text-decoration: none;
     font-size: 16px;
     line-height: 24px;
+}
+
+
+/*-------------------------------- 
+      Responsive The Website 
+--------------------------------*/
+/* Mobile Device */
+@media only screen and (max-width:688px) {
+    main {
+        align-items: center;
+        padding: 0 21px;
+    }
+
+    .top-banner {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title-area {
+        width: 100%;
+        padding-bottom: 21px;
+    }
+
+    .title-area .top-title {
+        font-size: 22px;
+        line-height: 33px;
+    }
+
+    .title-area .top-summary {
+        font-size: 14px;
+    }
+
+    .image-area {
+        width: 70%;
+        align-items: center;
+    }
+
+    .upcoming-match-blogs {
+
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0;
+        margin: 0;
+    }
+
+    .upcoming-match {
+        background-color: #FFFFFF;
+        text-align: center;
+    }
+
+    .upcoming-match .button-design {
+        width: auto;
+    }
+
+    .blogs {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .blog .thumbnail img {
+        width: 100%;
+    }
+
+    /* footer Area */
+    .footer-area {
+        margin-top: 24px;
+        padding: 24px;
+        justify-content: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        column-gap: 0px;
+        padding: 0;
+    }
+
+    nav li a {
+        line-height: 50px;
+    }
 }
