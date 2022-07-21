@@ -315,6 +315,7 @@ nav li a {
         text-align: center;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        column-gap: 22px;
         padding: 30px 0;
     }
 
@@ -325,5 +326,16 @@ nav li a {
 
     .blog .thumbnail img {
         width: 100%;
+    }
+
+    .footer-area {
+        padding: 55px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        column-gap: 30px;
+        row-gap: 20px;
+        padding: 0 53px;
     }
 }
